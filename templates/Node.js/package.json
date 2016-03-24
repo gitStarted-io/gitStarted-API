@@ -1,0 +1,11 @@
+{
+    "name": "~~~projectName~~~",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node ~~~serverName~~~.js",
+    },
+    "dependencies": {
+        ~~~dependencies~~~
+    },
+    "license": "MIT"
+}
