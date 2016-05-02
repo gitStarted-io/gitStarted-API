@@ -6,9 +6,9 @@ module.exports = function(app) {
 	app.get('/', require('./routes/index.js'));
 
 	// GET REQUESTS
-	
+	app.get('/template/search/:term', require('./routes/template/search-term.js'));
 
 	// POST REQUESTS
-	
+	app.post('/user/create', require('./routes/user/user-create.js'));
 
 };
