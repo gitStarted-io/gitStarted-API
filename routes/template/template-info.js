@@ -8,4 +8,4 @@ module.exports = (function() {
 	  // res.send('<h1>It\'s ALIVE!</h1>');
 	});
 
-})();
+});

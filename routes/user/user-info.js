@@ -8,4 +8,4 @@ module.exports = (function() {
 	  //res.send('<h1>' + req.params.user + '</h1>');
 	});
 
-})();
+});
