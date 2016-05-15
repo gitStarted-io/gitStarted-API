@@ -8,6 +8,7 @@ module.exports = function(app) {
 	app.get('/', require(routes + '/index.js'));
 
 	// GET REQUESTS
+	app.get('/template/comment/:templateId', require(routes + '/template/template-comments.js'));
 	app.get('/template/search/:term', require(routes + '/template/search-term.js'));
 	app.get('/template/get/top', require(routes + '/template/search-top.js'));
 	app.get('/template/:template/download', require(routes + '/template/template-download.js'));
