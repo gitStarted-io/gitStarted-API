@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/gitStarted-io/gitStarted-API.png?label=ready&title=Ready)](https://waffle.io/gitStarted-io/gitStarted-API)
 # gitStarted-API
 
 
