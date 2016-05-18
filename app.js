@@ -2,8 +2,10 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var morgan = require('morgan');
 
 var app = express();
+app.use(morgan('dev'));
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
