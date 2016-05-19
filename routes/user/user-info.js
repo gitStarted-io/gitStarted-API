@@ -10,6 +10,7 @@ module.exports = (function() {
 			id:1,
 			username:req.params.user,
 			thumbnail:'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png',
+			joinDate:"2016/05/13 09:05:04:653",
 			templates:[
 				{
 					templateId: 1,
