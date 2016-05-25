@@ -4,13 +4,19 @@
 
 var express = require('express');
 var router = express.Router();
+var sampleTemplate = require("../../sample_data/template-download");
 
 module.exports = (function() {
 
     var router = express.Router();
 
     router.get('/template/:template/download', function(req, res, next) {
-        res.send('<h1>' + req.params.template + ' to be downloaded.</h1>');
+        // Get the template information by name.
+        // ...
+        // Send it back.
+        console.log("GOT HERE");
+        console.log(sampleTemplate);
+        res.send(sampleTemplate);
     });
 
     return router;
