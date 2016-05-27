@@ -15,6 +15,7 @@ module.exports = function(app) {
 	app.get('/template/:template', require(routes + '/template/template-info.js'));
 	app.get('/download', require(routes + '/download.js'));
 	app.get('/user/:user', require(routes +'/user/user-info.js'));
+	app.get('/npmsearch/:term', require("./controllers/npm-search").getResults);
 
 	// POST REQUESTS
 	app.post('/user/create', require(routes + '/user/user-create.js'));
