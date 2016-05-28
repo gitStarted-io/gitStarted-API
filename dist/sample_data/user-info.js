@@ -1,0 +1,27 @@
+'use strict';
+
+module.exports = {
+	users: [{
+		id: 1,
+		username: 'jalsemgeest',
+		thumbnail: 'https://assets-cdn.github.com/images/modules/logos_page/Octocat.png',
+		// an array of template ids
+		templates: [1, 2, 3]
+	}, {
+		id: 2,
+		username: 'zackharley',
+		thumbnail: '',
+		templates: [4, 5]
+	}, {
+		id: 3,
+		username: 'colinmacleod',
+		thumbnail: '',
+		templates: [6, 7]
+	}, {
+		id: 4,
+		username: 'andrewlitt',
+		thumbnail: '',
+		templates: [8, 9, 10]
+	}]
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYW1wbGVfZGF0YS91c2VyLWluZm8uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxPQUFPLE9BQVAsR0FBaUI7QUFDaEIsUUFBTyxDQUNOO0FBQ0MsTUFBSSxDQURMO0FBRUMsWUFBVSxhQUZYO0FBR0MsYUFBVyxxRUFIWjs7QUFLQyxhQUFVLENBQUMsQ0FBRCxFQUFJLENBQUosRUFBTyxDQUFQO0FBTFgsRUFETSxFQVFOO0FBQ0MsTUFBSSxDQURMO0FBRUMsWUFBVSxZQUZYO0FBR0MsYUFBVyxFQUhaO0FBSUMsYUFBVyxDQUFDLENBQUQsRUFBSSxDQUFKO0FBSlosRUFSTSxFQWNOO0FBQ0MsTUFBSSxDQURMO0FBRUMsWUFBVSxjQUZYO0FBR0MsYUFBVyxFQUhaO0FBSUMsYUFBVyxDQUFDLENBQUQsRUFBSSxDQUFKO0FBSlosRUFkTSxFQW9CTjtBQUNDLE1BQUksQ0FETDtBQUVDLFlBQVUsWUFGWDtBQUdDLGFBQVcsRUFIWjtBQUlDLGFBQVcsQ0FBQyxDQUFELEVBQUksQ0FBSixFQUFPLEVBQVA7QUFKWixFQXBCTTtBQURTLENBQWpCIiwiZmlsZSI6InVzZXItaW5mby5qcyIsInNvdXJjZXNDb250ZW50IjpbIm1vZHVsZS5leHBvcnRzID0ge1xyXG5cdHVzZXJzOiBbXHJcblx0XHR7XHJcblx0XHRcdGlkOiAxLFxyXG5cdFx0XHR1c2VybmFtZTogJ2phbHNlbWdlZXN0JyxcclxuXHRcdFx0dGh1bWJuYWlsOiAnaHR0cHM6Ly9hc3NldHMtY2RuLmdpdGh1Yi5jb20vaW1hZ2VzL21vZHVsZXMvbG9nb3NfcGFnZS9PY3RvY2F0LnBuZycsXHJcblx0XHRcdC8vIGFuIGFycmF5IG9mIHRlbXBsYXRlIGlkc1xyXG5cdFx0XHR0ZW1wbGF0ZXM6WzEsIDIsIDNdXHJcblx0XHR9LFxyXG5cdFx0e1xyXG5cdFx0XHRpZDogMixcclxuXHRcdFx0dXNlcm5hbWU6ICd6YWNraGFybGV5JyxcclxuXHRcdFx0dGh1bWJuYWlsOiAnJyxcclxuXHRcdFx0dGVtcGxhdGVzOiBbNCwgNV1cclxuXHRcdH0sXHJcblx0XHR7XHJcblx0XHRcdGlkOiAzLFxyXG5cdFx0XHR1c2VybmFtZTogJ2NvbGlubWFjbGVvZCcsXHJcblx0XHRcdHRodW1ibmFpbDogJycsXHJcblx0XHRcdHRlbXBsYXRlczogWzYsIDddXHJcblx0XHR9LFxyXG5cdFx0e1xyXG5cdFx0XHRpZDogNCxcclxuXHRcdFx0dXNlcm5hbWU6ICdhbmRyZXdsaXR0JyxcclxuXHRcdFx0dGh1bWJuYWlsOiAnJyxcclxuXHRcdFx0dGVtcGxhdGVzOiBbOCwgOSwgMTBdXHJcblx0XHR9XHJcblx0XVxyXG59Il19

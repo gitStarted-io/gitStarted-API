@@ -13,7 +13,6 @@ const ENDPOINTS = {
 class NPMSearch {
 
     static getResults(req, res, next) {
-        console.log(req.params.term);
 
         if (!req.params.term) {
             res.status(400).send("Invalid request.");
@@ -21,8 +20,6 @@ class NPMSearch {
         } else {
 
             const url = `${ENDPOINTS.NPM_SEARCH}?q=${generateQuery(req.params.term)}&fields=name,version,description`;
-
-            console.log(url);
 
             var options = {
                 url: url,
