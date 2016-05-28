@@ -4,23 +4,13 @@ import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 
+import Routes from './routes';
+
 const app = express();
 
-// import routes
-import * as routes from './routes';
-
-console.log(routes);
-
-app.use('/', routes.indexRoute);
-app.use('/', routes.searchTemplatesRoute);
-app.use('/', routes.getTopTemplatesRoute);
-app.use('/', routes.templateCommmentsRoute);
-app.use('/', routes.downloadTemplateRoute);
-app.use('/', routes.templateInfoRoute);
-app.use('/', routes.currentUserInfoRoute);
-app.use('/', routes.userCreateRoute);
-app.use('/', routes.userInfoRoute);
-app.use('/', routes.downloadRoute);
+// Setting up the routes.
+app.use(express.Router());
+Routes.setup(app);
 
 app.use(morgan('dev'));
 app.use(bodyParser.json()); // support json encoded bodies
