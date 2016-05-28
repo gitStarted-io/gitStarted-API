@@ -1,0 +1,17 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.currentUserInfoRoute = undefined;
+
+var _express = require('express');
+
+var currentUserInfoRoute = (0, _express.Router)();
+
+currentUserInfoRoute.get('/currentUserInfoRoute', function (req, res) {
+	res.send('<h1>This is the currentUserRoute screen</h1>');
+});
+
+exports.currentUserInfoRoute = currentUserInfoRoute;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9yb3V0ZXMvdXNlci91c2VyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7QUFDQSxJQUFNLHVCQUF1QixzQkFBN0I7O0FBRUEscUJBQXFCLEdBQXJCLENBQXlCLHVCQUF6QixFQUFrRCxVQUFDLEdBQUQsRUFBTSxHQUFOLEVBQWM7QUFDL0QsS0FBSSxJQUFKLENBQVMsOENBQVQ7QUFDQSxDQUZEOztRQUlRLG9CLEdBQUEsb0IiLCJmaWxlIjoidXNlci5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Um91dGVyfSBmcm9tICdleHByZXNzJztcclxuY29uc3QgY3VycmVudFVzZXJJbmZvUm91dGUgPSBSb3V0ZXIoKTtcclxuXHJcbmN1cnJlbnRVc2VySW5mb1JvdXRlLmdldCgnL2N1cnJlbnRVc2VySW5mb1JvdXRlJywgKHJlcSwgcmVzKSA9PiB7XHJcblx0cmVzLnNlbmQoJzxoMT5UaGlzIGlzIHRoZSBjdXJyZW50VXNlclJvdXRlIHNjcmVlbjwvaDE+Jyk7XHJcbn0pO1xyXG5cclxuZXhwb3J0IHtjdXJyZW50VXNlckluZm9Sb3V0ZX07Il19

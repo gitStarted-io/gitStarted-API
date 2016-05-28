@@ -1,0 +1,17 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.downloadTemplateRoute = undefined;
+
+var _express = require('express');
+
+var downloadTemplateRoute = (0, _express.Router)();
+
+downloadTemplateRoute.get('/template/:templateId/download', function (req, res) {
+	res.send('<h1>' + req.params.templateId + ' to be downloaded.</h1>');
+});
+
+exports.downloadTemplateRoute = downloadTemplateRoute;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9yb3V0ZXMvdGVtcGxhdGUvdGVtcGxhdGUtZG93bmxvYWQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOztBQUNBLElBQU0sd0JBQXdCLHNCQUE5Qjs7QUFFQSxzQkFBc0IsR0FBdEIsQ0FBMEIsZ0NBQTFCLEVBQTRELFVBQUMsR0FBRCxFQUFNLEdBQU4sRUFBYztBQUN6RSxLQUFJLElBQUosQ0FBUyxTQUFTLElBQUksTUFBSixDQUFXLFVBQXBCLEdBQWlDLHlCQUExQztBQUNBLENBRkQ7O1FBSVEscUIsR0FBQSxxQiIsImZpbGUiOiJ0ZW1wbGF0ZS1kb3dubG9hZC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7Um91dGVyfSBmcm9tICdleHByZXNzJztcclxuY29uc3QgZG93bmxvYWRUZW1wbGF0ZVJvdXRlID0gUm91dGVyKCk7XHJcblxyXG5kb3dubG9hZFRlbXBsYXRlUm91dGUuZ2V0KCcvdGVtcGxhdGUvOnRlbXBsYXRlSWQvZG93bmxvYWQnLCAocmVxLCByZXMpID0+IHtcclxuXHRyZXMuc2VuZCgnPGgxPicgKyByZXEucGFyYW1zLnRlbXBsYXRlSWQgKyAnIHRvIGJlIGRvd25sb2FkZWQuPC9oMT4nKTtcclxufSk7XHJcblxyXG5leHBvcnQge2Rvd25sb2FkVGVtcGxhdGVSb3V0ZX07XHJcbiJdfQ==
