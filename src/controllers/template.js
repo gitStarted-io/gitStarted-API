@@ -108,7 +108,133 @@ class Template {
 
     // GET: '/template/:template/download'
     static templateDownload(req, res, next) {
-        res.status(200).send(topTemplates[0]);
+        let data = {
+            templateId: 1,
+            templateName: 'test',
+            description: 'test desc',
+            version: '1.0',
+            command: 'console.log("awesome");',
+            tags: ["test"],
+            author: "Jake",
+            repo:["git@github.com:gitStarted-io/templates/tree/master/nodejs/gulp"],
+            files: [
+                {
+                    file:"gulpfile.js",
+                    path:"nodejs/gulp",
+                    destination:"",
+                    children:[
+                        {
+                            file:"test.js",
+                            path:"test",
+                            children:[
+                                {
+                                    file:"test2.js",
+                                    path:"test2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    file:"index.js",
+                    path:"nodejs/index",
+                    destination:"",
+                    children:[
+                        {
+                            file:"routes.js",
+                            path:"routes"
+                        }
+                    ]
+                },
+                {
+                    file:"routes.js",
+                    path:"nodejs/routes",
+                    destination:""
+                },
+                {
+                    file:"index.js",
+                    path:"nodejs/routes",
+                    destination:"controllers"
+                }
+            ]
+        };
+        //         {
+        //             name: 'package.json',
+        //             isFile:true,
+        //             content: JSON.stringify({
+        //                 "name":"test",
+        //                 "version":"1.0",
+        //                 "description":"awesome test",
+        //                 "main":"index.js",
+        //                 "scripts": { "run": "node index.js" },
+        //                 "license":"MIT",
+        //                 "dependencies": {
+        //                     "path": "^0.12.7"
+        //                 },
+        //                 "devDependencies": {
+        //                     "gulp": "^3.9.1"
+        //                 }
+        //             })
+        //         },
+        //         {
+        //             name: "gulpfile.js",
+        //             isFile: true,
+        //             content: "var gulp = require('gulp');\n[[[TOP_CONTENT_REPLACE]]]\nconsole.log('after top');\n[[[MID_CONTENT_REPLACE]]]\nconsole.log('after mid');\n[[[BOTTOM_CONTENT_REPLACE]]]\nconsole.log('after bottom');",
+        //             dependencies: ["gulp"],
+        //             children: [
+        //                 {
+        //                     name:"test stuff",
+        //                     content:"[[[TOP_CONTENT_PLACEHOLDER]]]var requireDir = require('require-dir');[[[TOP_CONTENT_REPLACE]]][[[/TOP_CONTENT_PLACEHOLDER]]]\n[[[MID_CONTENT_PLACEHOLDER]]]console.log('from teststuff.');[[[/MID_CONTENT_PLACEHOLDER]]]\n[[[BOTTOM_CONTENT_PLACEHOLDER]]]console.log('bottom stuff');[[[/BOTTOM_CONTENT_PLACEHOLDER]]]",
+        //                     dependencies:["require-dir"],
+        //                     children:[
+        //                         {
+        //                             name:"test inner child",
+        //                             content:"[[[TOP_CONTENT_PLACEHOLDER]]]var hope = require('hope');[[[/TOP_CONTENT_PLACEHOLDER]]]"
+        //                         }
+        //                     ]
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             name: "src",
+        //             isFile: false,
+        //             children:[
+        //                 {
+        //                     name: "gulpfile-inside.js",
+        //                     isFile: true,
+        //                     content: "var gulp = require('gulp');\n[[[TOP_CONTENT_REPLACE]]]\nconsole.log('after top');\n[[[MID_CONTENT_REPLACE]]]\nconsole.log('after mid');\n[[[BOTTOM_CONTENT_REPLACE]]]\nconsole.log('after bottom');",
+        //                     dependencies: ["gulp"],
+        //                     children: [
+        //                         {
+        //                             name:"test stuff",
+        //                             content:"[[[TOP_CONTENT_PLACEHOLDER]]]var requireDir = require('require-dir');[[[TOP_CONTENT_REPLACE]]][[[/TOP_CONTENT_PLACEHOLDER]]]\n[[[MID_CONTENT_PLACEHOLDER]]]console.log('from teststuff.');[[[/MID_CONTENT_PLACEHOLDER]]]\n[[[BOTTOM_CONTENT_PLACEHOLDER]]]console.log('bottom stuff');[[[/BOTTOM_CONTENT_PLACEHOLDER]]]",
+        //                             dependencies:["require-dir"],
+        //                             isFile:true,
+        //                             children:[
+        //                                 {
+        //                                     name:"test inner child",
+        //                                     content:"[[[TOP_CONTENT_PLACEHOLDER]]]var hope = require('hope');[[[/TOP_CONTENT_PLACEHOLDER]]]"
+        //                                 }
+        //                             ]
+        //                         }
+        //                     ]
+        //                 },
+        //                 {
+        //                     name:"controllers",
+        //                     isFile:false,
+        //                     children:[
+        //                         {
+        //                             name: "test.js",
+        //                             content: "class Awesome {\n   constructor(data) {\n      this.test = data;\n   }\n}\n\nmodule.exports = Awesome;",
+        //                             isFile:true
+        //                         }
+        //                     ]
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // };
+        res.status(200).json(data);
     }
 
     // GET: '/template/:templateId'

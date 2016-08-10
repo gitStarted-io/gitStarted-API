@@ -5,7 +5,7 @@
 class Download {
     // GET: '/download'
     static download(req, res, next) {
-        res.send('<h1>downloadRoute GitStarted</h1>');
+        res.send('<h1>Download the thing!</h1>');
     }
 }
 

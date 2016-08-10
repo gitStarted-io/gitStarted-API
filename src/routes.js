@@ -19,9 +19,11 @@ class Routes {
         app.get('/user/:user', User.getUserInfo);
         app.get('/currentUserInfoRoute', User.getCurrentUser);
         app.get('/npmsearch/:term', NPMSearch.getResults);
+        app.get('/user/:userId/:guid', User.validateUser);
 
         // POST REQUESTS
         app.post('/user/create', User.createUser);
+        app.post('/user/login', User.loginUser);
     }
 }
 
