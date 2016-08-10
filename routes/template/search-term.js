@@ -8,11 +8,14 @@ var router = express.Router();
 // Sample data
 var templates = require(path.resolve(__dirname, '../../sample_data/template-info.js')).templates;
 
+const MESSAGES = {
+	NOT_FOUND:{message: 'This search produced no results.'}
+};
+
 module.exports = (function() {
 
     var router = express.Router();
     var templatesToSend = [];
-    var notFound = {message: 'This search produced no results.'}
 
     // find matching terms and add them to an array
     /*
@@ -57,7 +60,7 @@ module.exports = (function() {
     	if(points)
     		res.send(points);
     	else
-    		res.status(404).send(notFound);
+    		res.status(404).send(MESSAGES.NOT_FOUND);
     });
 
     router.get('/template/search/:term', function() {
