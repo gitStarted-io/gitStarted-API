@@ -7,7 +7,7 @@ const request = require("request");
 const NPMResults = require("../models/npm-search-response");
 
 const ENDPOINTS = {
-    NPM_SEARCH: "http://npmsearch.com/query"
+    NPM_SEARCH: "https://api.npms.io/search/suggestions"
 };
 
 class NPMSearch {
@@ -19,7 +19,7 @@ class NPMSearch {
             return;
         } else {
 
-            const url = `${ENDPOINTS.NPM_SEARCH}?q=${generateQuery(req.params.term)}&fields=name,version,description`;
+            const url = `${ENDPOINTS.NPM_SEARCH}?term=${generateQuery(req.params.term)}`;
 
             var options = {
                 url: url,
@@ -46,7 +46,7 @@ class NPMSearch {
 }
 
 function generateQuery(str) {
-    return str.split(" ").join(",");
+    return str.split(" ").join("+");
 }
 
 module.exports = NPMSearch;

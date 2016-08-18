@@ -1,14 +1,18 @@
+const UtilityService = require("../lib/utility-service");
 /**
  * Created by Durzo on 5/26/2016.
  */
 
 class NPMSearchResponse {
     constructor(response) {
-        this.results = response.results.map((result) => {
+        this.results = response.map((result) => {
+            let module = result.module;
+            let description = UtilityService.removeMarkdown(module.description);
             return {
-                name: result.name[0],
-                description: result.description[0],
-                version: result.version[0]
+                name: module.name,
+                description: description,
+                version: module.version,
+                url: module.links.npm
             };
         });
     }
