@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gitstarted-api
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: gitstarted-api-pods
+    spec:
+      containers:
+      - image: gcr.io/fine-branch-132923/gitstarted-api:1.1
+        name: gitstarted-api-container
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          name: http-server

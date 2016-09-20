@@ -1,5 +1,5 @@
 {
-  "name": "gitStarted-API",
+  "name": "gitstarted-api",
   "version": "0.0.1",
   "private": true,
   "main": "app.js",
@@ -7,8 +7,8 @@
     "test": "npm run build && babel test -d dist/test -s inline && mocha ./dist/test/all.js -R spec",
     "start": "babel src -d dist -s inline && node ./dist/app.js",
     "build": "babel src -d dist -s inline",
-    "dockerize": "docker build -t gcr.io/GitStarted/microservices:1.0",
-    "docker:push": "gcloud docker push gcr.io/GitStarted/microservices:1.0",
+    "dockerize": "docker build -t gcr.io/fine-branch-132923/microservices:1.1 .",
+    "docker:push": "gcloud docker push gcr.io/fine-branch-132923/microservices:1.1"
   },
   "dependencies": {
     "body-parser": "^1.15.1",
