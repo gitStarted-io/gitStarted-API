@@ -2,7 +2,7 @@
  * Created by Durzo on 5/28/2016.
  */
 
-import should from 'should';
+const should = require('should');
 
 class UserTests {
     static executeTests(opts, callback) {

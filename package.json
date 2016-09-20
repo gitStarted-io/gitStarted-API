@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run build && babel test -d dist/test -s inline && mocha ./dist/test/all.js -R spec",
-    "start": "babel src -d dist -s inline && node ./dist/app.js",
+    "start": "node app.js",
     "build": "babel src -d dist -s inline",
     "dockerize": "docker build -t gcr.io/GitStarted/microservices:1.0",
-    "docker:push": "gcloud docker push gcr.io/GitStarted/microservices:1.0",
+    "docker:push": "gcloud docker push gcr.io/GitStarted/microservices:1.0"
   },
   "dependencies": {
     "body-parser": "^1.15.1",

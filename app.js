@@ -1,10 +1,9 @@
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import cookieParser from 'cookie-parser';
-import morgan from 'morgan';
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
 
-import Routes from './routes';
+const Routes = require('./routes');
 
 const app = express();
 
@@ -18,6 +17,6 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const server = app.listen(process.env.PORT || 3000, () => {
-  const {address, port} = server.address();
+  const { address, port } = server.address();
   console.log(`gitStarted API listening at http://${address}:${port}`);
 });
