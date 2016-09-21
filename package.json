@@ -5,11 +5,12 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run build && babel test -d dist/test -s inline && mocha ./dist/test/all.js -R spec",
-    "start": "babel src -d dist -s inline && node ./dist/app.js",
+    "start": "node app.js",
     "build": "babel src -d dist -s inline",
-    "dockerize": "docker build -t gcr.io/fine-branch-132923/microservices:1.1 .",
+    "docker:deploy": "echo 'Container Version#: ' && read contVers && docker build -t gcr.io/fine-branch-132923/microservices:$contVers . && gcloud docker push gcr.io/fine-branch-132923/microservices:$contVers && sed -r 's/(.*)(\\:)([0-9]\\.+)([0-9]+)(.*)/echo \"\\1\\2'$contVers'\"/ge' deployment.yaml | sponge deployment.yaml && kubectl apply -f deployment.yaml && watch kubectl get svc",
+    "dockerize": "echo 'Container Version#: ' && read contVers && docker build -t gcr.io/fine-branch-132923/microservices:$contVers .",
     "docker:push": "gcloud docker push gcr.io/fine-branch-132923/microservices:1.1"
-  },
+},
   "dependencies": {
     "body-parser": "^1.15.1",
     "cookie-parser": "^1.4.2",

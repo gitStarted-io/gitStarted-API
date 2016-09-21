@@ -1,12 +1,12 @@
 /**
  * Created by Jake Alsemgeest on 2016-05-14.
  */
-var path = require('path');
-var express = require('express');
-var router = express.Router();
+const path = require('path');
+const express = require('express');
+const router = express.Router();
 
 // Sample data
-var templates = require(path.resolve(__dirname, '../../sample_data/template-info.js')).templates;
+const templates = require(path.resolve(__dirname, '../../sample_data/template-info.js')).templates;
 
 const MESSAGES = {
 	NOT_FOUND:{message: 'This search produced no results.'}

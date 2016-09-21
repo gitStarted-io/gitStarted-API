@@ -10,9 +10,9 @@ spec:
         name: gitstarted-api-pods
     spec:
       containers:
-      - image: gcr.io/fine-branch-132923/gitstarted-api:1.1
+      - image: gcr.io/fine-branch-132923/microservices:1.1
         name: gitstarted-api-container
         imagePullPolicy: Always
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
           name: http-server
